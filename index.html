@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html>
+<style>
+.priority_normal {
+  width: 16px;
+  height: 16px;
+  background: url(startrek_icons.png) no-repeat;
+  background-position: 0 -32px;
+}
+.priority_critical {
+  width: 16px;
+  height: 16px;
+  background: url(startrek_icons.png) no-repeat;
+  background-position: 0 -16px;
+}
+.priority_blocker {
+  width: 16px;
+  height: 16px;
+  background: url(startrek_icons.png) no-repeat;
+  background-position: 0 0px;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  background: url(circles.png) no-repeat;
+}
+.circle_black {
+  background-position: 0 0px;
+}
+.circle_red {
+  background-position: 0 -50px;
+}
+.circle_green {
+  background-position: 0 -100px;
+}
+.circle_blue {
+  background-position: 0 -150px;
+}
+.circle_yellow {
+  background-position: 0 -200px;
+}
+.repeat {
+  background-image: url(green-24x24.png);
+  display: inline-block;
+  width: 130px;
+  height: 110px;
+  margin: 10px;
+  background-color: green;
+}
+</style>
+<head>
+<title>DXT5 Compression problems</title>
+</head>
+<body onload="drawImages()">
+<div>
+  <h4>CSS transform</h4>
+  Should be 3 different startrek icons.<br>
+  <img class="priority_normal" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="normal" title="normal" />
+  <img class="priority_critical" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="critical" title="critical" />
+  <img class="priority_blocker" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="blocker" title="blocker" />
+
+  <br>
+  Should be 5 circles of different color.<br>
+  <img class="circle circle_black" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" />
+  <img class="circle circle_red" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" />
+  <img class="circle circle_green" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" />
+  <img class="circle circle_blue" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" />
+  <img class="circle circle_yellow" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" />
+</div>
+<div>
+  <h4>Background-repeat</h4>
+  <div class="repeat" style="background-repeat: repeat repeat;"></div>
+  <div class="repeat" style="background-repeat: repeat space;"></div>
+  <div class="repeat" style="background-repeat: repeat round;"></div>
+  <br>
+
+  <div class="repeat" style="background-repeat: space repeat;"></div>
+  <div class="repeat" style="background-repeat: space space;"></div>
+  <div class="repeat" style="background-repeat: space round;"></div>
+  <br>
+
+  <div class="repeat" style="background-repeat: round repeat;"></div>
+  <div class="repeat" style="background-repeat: round space;"></div>
+  <div class="repeat" style="background-repeat: round round;"></div>
+  <br>
+
+  The above images should look exactly like the image below. </br>
+  <img src="repeat_expected.png" />
+
+</div>
+<div>
+  <h4>Progressive images</h4>
+  Interlaced png<br>
+  <img src="interlaced_png.png" />
+  <br>
+  Progressive jpg<br>
+  <img src="progressive_jpg.jpg" />
+</div>
+<div>
+  <h4>CMYK color profile</h4>
+  <img src="cmyk.jpg" />
+  <br>
+  <img src="JCS_CMYK_35100.jpg" />
+</div>
+<div>
+  <h4>Canvas</h4>
+  <canvas id="canvas" width=500 height=300 style="height: 300px; width: 500px; top: 0px; left: 0px; transform: translate3d(0px, 0px, 0px) scale(1, 1); z-index: 2500; cursor: default;"></canvas>
+
+  <br>
+  The above images should be the second image below on top of the first image below, shifted to the right.
+  <br>
+  <img id="source256" src="256.png">
+  <img id="source" src="pastebin_logo_side_outline.png">
+</div>
+<div>
+  <h4>Miscellaneous</h4>
+  <img src="achievement.jpg" />
+</div>
+
+<script type="text/javascript">
+  function drawImages() {
+    var canvas = document.getElementById('canvas');
+    var ctx = canvas.getContext('2d');
+    var image = document.getElementById('source');
+    var image256 = document.getElementById('source256');
+    ctx.drawImage(image256, 10, 0);
+    ctx.drawImage(image, 150, 0);
+  }
+</script>
+
+</body>
+</html>
