@@ -21,6 +21,22 @@
   background-position: 0 0px;
 }
 
+.scale05 {
+  transform: scale(0.5, 0.5);
+}
+
+.scale09 {
+  transform: scale(0.9, 0.9);
+}
+
+.scale11 {
+  transform: scale(1.1, 1.1);
+}
+
+.scale15 {
+  transform: scale(1.5, 1.5);
+}
+
 .circle {
   width: 50px;
   height: 50px;
@@ -49,12 +65,6 @@
   margin: 10px;
   background-color: green;
 }
-.alpha05 {
-  transform: scale(0.5, 0.5);
-}
-.alpha15 {
-  transform: scale(1.5, 1.5);
-}
 </style>
 <head>
 <title>DXT5 Compression problems</title>
@@ -66,6 +76,16 @@
   <img class="priority_normal" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="normal" title="normal" />
   <img class="priority_critical" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="critical" title="critical" />
   <img class="priority_blocker" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="blocker" title="blocker" />
+
+  <br>Should be 3 different startrek icons. Scale 0.9<br>
+  <img class="priority_normal scale09" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="normal" title="normal" />
+  <img class="priority_critical scale09" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="critical" title="critical" />
+  <img class="priority_blocker scale09" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="blocker" title="blocker" />
+
+  <br>Should be 3 different startrek icons. Scale 1.1<br>
+  <img class="priority_normal scale11" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="normal" title="normal" />
+  <img class="priority_critical scale11" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="critical" title="critical" />
+  <img class="priority_blocker scale11" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="blocker" title="blocker" />
 
   <br>
   Should be 5 circles of different color.<br>
@@ -130,8 +150,8 @@
 <div>
   <h4>PNG with alpha and scale</h4>
   <img src="images/alpha.png" />
-  <img class="alpha05" src="images/alpha.png" />
-  <img class="alpha15" src="images/alpha.png" />
+  <img class="scale05" src="images/alpha.png" />
+  <img class="scale15" src="images/alpha.png" />
 </div>
 
 <script type="text/javascript">
