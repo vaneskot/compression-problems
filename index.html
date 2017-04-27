@@ -65,11 +65,29 @@
   margin: 10px;
   background-color: green;
 }
+.hovered {
+  position:absolute;
+  font-size: 200%;
+  top:75px;
+  -webkit-animation: mymove 2s infinite linear;
+}
+@-webkit-keyframes mymove {
+    0% {top: 75px;}
+    50% {top: 200px;} 
+    100% {top: 75px;}
+}
 </style>
 <head>
 <title>DXT5 Compression problems</title>
 </head>
 <body onload="drawImages()">
+<div>
+  <h4>Animated text over image</h4>
+  <img src="images/256.png" />
+  <div class="hovered">
+    Just text!
+  </div>
+</div>
 <div>
   <h4>Simple Non Power of Two PNG</h4>
   <img src="images/npot.png" />
