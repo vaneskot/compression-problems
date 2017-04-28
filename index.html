@@ -65,16 +65,28 @@
   margin: 10px;
   background-color: green;
 }
-.hovered {
+.mvY {
   position:absolute;
   font-size: 200%;
   top:75px;
-  -webkit-animation: mymove 2s infinite linear;
+  -webkit-animation: mymoveY 2s infinite linear;
 }
-@-webkit-keyframes mymove {
+@-webkit-keyframes mymoveY {
     0% {top: 75px;}
-    50% {top: 200px;} 
+    50% {top: 200px;}
     100% {top: 75px;}
+}
+.mvX {
+  position:absolute;
+  font-size: 200%;
+  top:100px;
+  left:75px;
+  -webkit-animation: mymoveX 2s infinite linear;
+}
+@-webkit-keyframes mymoveX {
+    0% {left: 75px;}
+    50% {left: 200px;}
+    100% {left: 75px;}
 }
 </style>
 <head>
@@ -84,8 +96,11 @@
 <div>
   <h4>Animated text over image</h4>
   <img src="images/256.png" />
-  <div class="hovered">
+  <div class="mvY">
     Just text!
+  </div>
+  <div class="mvX">
+    Another text!
   </div>
 </div>
 <div>
