@@ -1,99 +1,27 @@
 
 <!DOCTYPE html>
 <html>
-<style>
-.priority_normal {
-  width: 16px;
-  height: 16px;
-  background: url(images/startrek_icons.png) no-repeat;
-  background-position: 0 -32px;
-}
-.priority_critical {
-  width: 16px;
-  height: 16px;
-  background: url(images/startrek_icons.png) no-repeat;
-  background-position: 0 -16px;
-}
-.priority_blocker {
-  width: 16px;
-  height: 16px;
-  background: url(images/startrek_icons.png) no-repeat;
-  background-position: 0 0px;
-}
-
-.scale05 {
-  transform: scale(0.5, 0.5);
-}
-
-.scale09 {
-  transform: scale(0.9, 0.9);
-}
-
-.scale11 {
-  transform: scale(1.1, 1.1);
-}
-
-.scale15 {
-  transform: scale(1.5, 1.5);
-}
-
-.circle {
-  width: 50px;
-  height: 50px;
-  background: url(images/circles.png) no-repeat;
-}
-.circle_black {
-  background-position: 0 0px;
-}
-.circle_red {
-  background-position: 0 -50px;
-}
-.circle_green {
-  background-position: 0 -100px;
-}
-.circle_blue {
-  background-position: 0 -150px;
-}
-.circle_yellow {
-  background-position: 0 -200px;
-}
-.repeat {
-  background-image: url(images/green-24x24.png);
-  display: inline-block;
-  width: 130px;
-  height: 110px;
-  margin: 10px;
-  background-color: green;
-}
-.mvY {
-  position:absolute;
-  font-size: 200%;
-  top:75px;
-  -webkit-animation: mymoveY 2s infinite linear;
-}
-@-webkit-keyframes mymoveY {
-    0% {top: 75px;}
-    50% {top: 200px;}
-    100% {top: 75px;}
-}
-.mvX {
-  position:absolute;
-  font-size: 200%;
-  top:100px;
-  left:75px;
-  -webkit-animation: mymoveX 2s infinite linear;
-}
-@-webkit-keyframes mymoveX {
-    0% {left: 75px;}
-    50% {left: 200px;}
-    100% {left: 75px;}
-}
-</style>
 <head>
+<link type="text/css" rel="stylesheet" href="styles/common.css" />
+<style type="text/css">
+  .startrek_background {
+    background-image: url(/images/startrek_icons.png);
+  }
+
+  .circle {
+    background-image: url(/images/circles.png);
+  }
+
+  .repeat {
+    background-image: url(/images/green-24x24.png);
+  }
+</style>
+
 <title>DXT5 Compression problems</title>
 </head>
 <body onload="drawImages()">
 <div>
+  <a href="jpeg_test.html">JPEG Images</a><br>
   <h4>Animated text over image</h4>
   <img src="images/256.png" />
   <div class="mvY">
@@ -128,19 +56,19 @@
 <div>
   <h4>CSS transform</h4>
   Should be 3 different startrek icons.<br>
-  <img class="priority_normal" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="normal" title="normal" />
-  <img class="priority_critical" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="critical" title="critical" />
-  <img class="priority_blocker" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="blocker" title="blocker" />
+  <img class="priority_normal startrek_background" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="normal" title="normal" />
+  <img class="priority_critical startrek_background" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="critical" title="critical" />
+  <img class="priority_blocker startrek_background" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="blocker" title="blocker" />
 
   <br>Should be 3 different startrek icons. Scale 0.9<br>
-  <img class="priority_normal scale09" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="normal" title="normal" />
-  <img class="priority_critical scale09" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="critical" title="critical" />
-  <img class="priority_blocker scale09" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="blocker" title="blocker" />
+  <img class="priority_normal startrek_background scale09" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="normal" title="normal" />
+  <img class="priority_critical startrek_background scale09" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="critical" title="critical" />
+  <img class="priority_blocker startrek_background scale09" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="blocker" title="blocker" />
 
   <br>Should be 3 different startrek icons. Scale 1.1<br>
-  <img class="priority_normal scale11" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="normal" title="normal" />
-  <img class="priority_critical scale11" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="critical" title="critical" />
-  <img class="priority_blocker scale11" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="blocker" title="blocker" />
+  <img class="priority_normal startrek_background scale11" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="normal" title="normal" />
+  <img class="priority_critical startrek_background scale11" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="critical" title="critical" />
+  <img class="priority_blocker startrek_background scale11" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="blocker" title="blocker" />
 
   <br>
   Should be 5 circles of different color.<br>
