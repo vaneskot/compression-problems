@@ -126,6 +126,16 @@
   <img id="source256" src="images/256.png">
   <img id="source" src="images/pastebin_logo_side_outline.png">
 </div>
+
+<div>
+  <h4>Canvas #2</h4>
+  <canvas id="canvas2" width=990 height=250 style="height: 250px; width: 990px; top: 0px; left: 0px;"></canvas>
+
+  <br>
+  <img id="bkgimage" src="images/bg300x250_cedi.jpg">
+  <img id="overlay" src="images/cedi.png">
+</div>
+
 <div>
   <h4>Miscellaneous</h4>
   <img src="images/achievement.jpg" />
@@ -142,13 +152,27 @@
 </div>
 
 <script type="text/javascript">
-  function drawImages() {
+  function drawImages1() {
     var canvas = document.getElementById('canvas');
     var ctx = canvas.getContext('2d');
     var image = document.getElementById('source');
     var image256 = document.getElementById('source256');
     ctx.drawImage(image256, 10, 0);
     ctx.drawImage(image, 150, 0);
+  }
+
+  function drawImages2() {
+    var canvas = document.getElementById('canvas2');
+    var ctx = canvas.getContext('2d');
+    var man = document.getElementById('overlay');
+    var bkg = document.getElementById('bkgimage');
+    ctx.drawImage(bkg, 0, 0, 990, 250);
+    ctx.drawImage(man, 400, 50);
+  }
+
+  function drawImages() {
+    drawImages1();
+    drawImages2();
   }
 </script>
 
