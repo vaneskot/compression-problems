@@ -6,19 +6,16 @@
   width: 16px;
   height: 16px;
   background-position: 0 -32px;
-  background: no-repeat;
 }
 .priority_critical {
   width: 16px;
   height: 16px;
   background-position: 0 -16px;
-  background: no-repeat;
 }
 .priority_blocker {
   width: 16px;
   height: 16px;
   background-position: 0 0px;
-  background: no-repeat;
 }
 
 .scale05 {
@@ -63,6 +60,12 @@
   height: 110px;
   margin: 10px;
   background-color: green;
+}
+.google_logo {
+  background-size: 92px 2697px;
+  background-position: 0 -1041px;
+  height: 33px;
+  width: 92px;
 }
 .mvY {
   position:absolute;
